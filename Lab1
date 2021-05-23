@@ -1,0 +1,42 @@
+//Author: NoahCovarrubias
+//Filename: Lab01.java
+//This is the first lab where we had to calculate the average 
+// between three tests
+//For: CSE 110-Lab#1
+// Time spent: It took two lab sessions to get it done
+import java.util.Scanner;
+
+public class Lab01{
+	public static void main(String[] args){
+		//this is where the variables are declared
+		// we want to carry values so they need to be defined and we do that here
+		double test1 = 0; // this is just the initial value that it is declared as
+		double test2; // here the variable is declared with no initial values 
+		double test3;
+		final double NUM_TESTS = 3; // the final makes it a fixed value that wont change 
+		// here we are able to use the int command as well
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.print("Enter the score on the first test:");
+		test1 = keyboard.nextDouble(); // if it is an integer use the keyboard.nextint() 
+		// int will go to integers so 90.5 will become 90.0 which does not hold the  
+		// same so use double to keep that value to be correct 
+		System.out.print("Enter the score on the second test:");
+		test2 = keyboard.nextDouble();
+		
+		System.out.print("Enter the score on the third test:");
+		test3 = keyboard.nextDouble();
+		// -->
+		
+		double avg;
+		avg = (test1 + test2 + test3) / NUM_TESTS;
+		System.out.print("Your average score is: " + avg);
+		
+	}
+}
+/* Output: 
+Enter the score on the first test:90
+Enter the score on the second test:90
+Enter the score on the third test:92
+Your average score is: 90.66666666666667 */
